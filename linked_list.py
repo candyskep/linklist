@@ -28,7 +28,7 @@ M4BlockChain.append(create_genesis_block())
 def next_block(last_block):
     index=last_block.index+1
     timestamp = datetime.now()
-    content="this is block"+index
+    content="this is block "+str(index)
     previous_hash=last_block.hash
     nb=Block(index,timestamp,content,previous_hash)
     return nb
