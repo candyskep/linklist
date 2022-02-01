@@ -30,15 +30,15 @@ def next_block(last_block):
     timestamp = datetime.now()
     content="this is block"+index
     previous_hash=last_block.hash
-    next_block=Block(index,timestamp,content,previous_hash)
-    return next_block
+    nb=Block(index,timestamp,content,previous_hash)
+    return nb
     
 # append 5 blocks to the blockchain
 def app_five(block_list):
 
     for i in range(5):
         last_block=block_list[-1]
-        next_block=next_block(last_block)
-        block_list.append(next_block)
+        nb=next_block(last_block)
+        block_list.append(nb)
     pass
 
